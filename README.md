@@ -12,3 +12,7 @@ Requirements:
 * sox (with soxplay)
 * a c compiler with support for the -o flag
 
+Usage: ./smallprogram.sh _-cc compiler_ _-rate bitrate_ _-duration seconds_ script _filename.wav_
+
+If you provide an output filename, the script will produce a file with that filename, whether or not one already exists. If you do not provide an output filename, it will use sox to play the result.
+
