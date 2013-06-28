@@ -5,6 +5,17 @@ time=60
 
 cc=gcc
 
+while [[ $# -gt 1 ]] ; do
+	{ echo "$1" | grep -q '^-' } || break
+	{ echo "$1" | grep -q '^-h' } && {
+		echo -e "Usage: $0 -h[elp] | [ -cc compiler ] [ -rate bitrate ] [ -time duration ] script [ filename ]\n\nduration should be in seconds. If filename is not specified, the audio will be played rather than recorded"
+		exit 0
+	}
+	{ echo "$1" | grep -q '^-cc' } && { cc=$2 ; shift 2 }
+	{ echo "$1" | grep -q '^-rate' } && { rate=$2 ; shift 2 }
+	{ echo "$1" | grep -q '^-time' } && { time=$2 ; shift 2 }
+done
+
 play=play
 if [[ $# -gt 1 ]]; then
 	play=sox
