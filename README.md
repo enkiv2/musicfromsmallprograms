@@ -17,8 +17,10 @@ Usage: ./smallprogram.sh _-cc compiler_ _-rate bitrate_ _-duration seconds_ scri
 If you provide an output filename, the script will produce a file with that filename, whether or not one already exists. If you do not provide an output filename, it will use sox to play the result.
 
 Examples:
-./smallprogram.sh 't&t>>8' # play the plain vanilla 'sierpinski harmony'
-./smallprogram.sh -rate 8000 '((t\*(t>>8|t>>9)&46&t>>8))^(t&t>>13|t>>6)' # play xpansive's 'Lost in Space' from http://pouet.net/topic.php?which=8357&page=2
+
+    ./smallprogram.sh 't&t>>8' # play the plain vanilla 'sierpinski harmony'
+    
+    ./smallprogram.sh -rate 8000 '((t\*(t>>8|t>>9)&46&t>>8))^(t&t>>13|t>>6)' # play xpansive's 'Lost in Space' from http://pouet.net/topic.php?which=8357&page=2
 
 For a lot of interesting examples, try [viznut's collection of notable one-line music formulas](http://pelulamu.net/countercomplex/music_formula_collection.txt). To try to build your own more scientifically, take a look at [his blog post, analysing the attributes of these formulas](http://countercomplex.blogspot.com/2011/10/some-deep-analysis-of-one-line-music.html).
 
